@@ -10,17 +10,14 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            int x = 5;
-            int y = 10;
-            string Symbol = "$";
-            PrintSymbol( x, y, Symbol );
+            Point p1 = new Point();
+            p1.x = 1;
+            p1.y = 3;
+            p1.Sym = '*';
+            p1.Draw();
             Console.ReadKey();
 
         }
-        static void PrintSymbol (int x, int y, string Znak)
-        {
-            Console.SetCursorPosition( x , y );
-            Console.Write( Znak );
-        }
+
     }
 }
