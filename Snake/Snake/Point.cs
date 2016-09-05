@@ -8,9 +8,9 @@ namespace Snake
 {
     class Point
     {
-        public int x;
-        public int y;
-        public char Sym;
+        private int x = 0;
+        private int y = 0;
+        private char Sym = ' ';
 
         public Point(int _x, int _y, char _sym)
         {
@@ -21,6 +21,8 @@ namespace Snake
 
         public void Draw()
         {
+            // выводит символ на экран по заданным координатам.
+
             Console.SetCursorPosition(x, y);
             Console.Write(Sym);
         }
