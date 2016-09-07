@@ -6,25 +6,17 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class VertikalLine
+    class VertikalLine : Figure
     {
-        List<Point> LinePoint;
 
         public VertikalLine (int xLine, int yUp, int yDown, char Sym)
         {
             LinePoint = new List<Point>();
 
-            for (int y = yUp; y <= yDown; y++)
+            for (int y = yDown; y <= yUp; y++)
             {
                 Point p = new Point(xLine,y,Sym);
                 LinePoint.Add(p);
-            }
-        }
-        public void Draw()
-        {
-            foreach (Point p in LinePoint)
-            {
-                p.Draw();
             }
         }
 }
