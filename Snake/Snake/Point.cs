@@ -19,6 +19,25 @@ namespace Snake
             Sym = _sym;
         }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            Sym = p.Sym;
+        }
+
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.Right)
+                x = x + offset;
+            if (direction == Direction.Left)
+                x = x - offset;
+            if (direction == Direction.Down)
+                y = y + offset;
+            if (direction == Direction.Up)
+                y = y - offset;
+        }
+
         public void Draw()
         {
             // выводит символ на экран по заданным координатам.
