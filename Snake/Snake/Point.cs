@@ -38,6 +38,12 @@ namespace Snake
                 y = y - offset;
         }
 
+        internal void Clear()
+        {
+            Sym = ' ';
+            Draw();
+        }
+
         public void Draw()
         {
             // выводит символ на экран по заданным координатам.

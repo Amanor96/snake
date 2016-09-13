@@ -28,8 +28,15 @@ namespace Snake
 
             Point p = new Point(10,10,'*');
 
-            Snake snake = new Snake( p, 3, Direction.Right );
-            snake.Draw();
+            Snake snake = new Snake( p, 4, Direction.Right );
+
+            while(true)
+            {
+                System.Threading.Thread.Sleep(300);
+                snake.move();
+                snake.Draw();
+            }
+
             Console.ReadKey();
 
 
